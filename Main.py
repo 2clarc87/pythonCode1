@@ -1,1 +1,6 @@
-print("Hello World")
+print("What is your name:\n")
+name = input()
+print(f"Hello {name}")
+print("What is your lat name")
+lastName = input()
+print(f"Hello {name} {lastName}")
