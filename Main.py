@@ -1,5 +1,5 @@
 import math
-while(True):
+while True:
     choice = int(input("\n\nWhat do you want to do:\n1)Name\n2)Health\n3)Robot Game\n4)Age Check\n5)Count\n6)Game\n"))
     if choice == 1:
         name = input("What is your name:")
@@ -24,9 +24,10 @@ while(True):
             print("You are a child.")
     elif choice == 5:
         number = int(input("What do you want to count to:"))
-        for i in range(number):
-            print(i+1)
-    elif choice == 6:
+        for i in range(number-1):
+            print(i+1, end=", ")
+        print(i+2)
+    elif choice == 6 or choice == 7:
         array = [["X", "X", "X"], ["X", "X", "X"], ["X", "X", "X"]]
         while True:
             for j in range(3):
@@ -35,8 +36,9 @@ while(True):
                     print(array[i][2-j], end="")
             print("\n")
             enter = int(input("Enter what you what to change:"))
-            if enter == 0: break
-            if enter <= 3:
+            if enter == 0:
+                break
+            elif enter <= 3:
                 y = 0
             elif enter <= 6:
                 y = 1
