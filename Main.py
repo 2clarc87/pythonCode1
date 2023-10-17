@@ -1,6 +1,9 @@
 import math
+
+from Methods import randomNumber
+
 while True:
-    choice = int(input("\n\nWhat do you want to do:\n1)Name\n2)Health\n3)Robot Game\n4)Age Check\n5)Count\n6)Game\n"))
+    choice = int(input("\n\nWhat do you want to do:\n1)Name\n2)Health\n3)Robot Game\n4)Age Check\n5)Count\n6)Paint\n7)Random Number\n"))
     if choice == 1:
         name = input("What is your name:")
         lastName = input("What is your last name:")
@@ -27,7 +30,7 @@ while True:
         for i in range(number-1):
             print(i+1, end=", ")
         print(i+2)
-    elif choice == 6 or choice == 7:
+    elif choice == 6:
         array = [["X", "X", "X"], ["X", "X", "X"], ["X", "X", "X"]]
         while True:
             for j in range(3):
@@ -49,5 +52,9 @@ while True:
                 array[x][y] = " "
             else:
                 array[x][y] = "X"
+
+    elif choice == 7:
+        randomNumber()
     else:
+
         break
